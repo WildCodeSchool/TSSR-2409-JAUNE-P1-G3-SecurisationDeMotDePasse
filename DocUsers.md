@@ -2,7 +2,6 @@
 
 # DOCUMENTATION UTILISATEUR
 
-![Logo John the Ripper](JtR.png)
 
 ## Utilisation de base :
 comment utiliser les fonctionnalités clés
