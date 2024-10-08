@@ -1,3 +1,5 @@
+![Logo John the Ripper](Images/JtR.png)
+
 # DOCUMENTATION UTILISATEUR
 
 ![Logo John the Ripper](JtR.png)
