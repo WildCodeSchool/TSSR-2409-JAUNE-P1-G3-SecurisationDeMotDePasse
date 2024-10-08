@@ -1,3 +1,5 @@
+![Logo John the Ripper](Images/JtR.png)
+
 # DOCUMENTATION ADMINISTRATEUR
 
 ## Prérequis techniques
