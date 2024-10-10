@@ -2,6 +2,7 @@
 
 # DOCUMENTATION UTILISATEUR
 
+## Notions juridiques
 
 ## Utilisation de base :
 comment utiliser les fonctionnalités clés
