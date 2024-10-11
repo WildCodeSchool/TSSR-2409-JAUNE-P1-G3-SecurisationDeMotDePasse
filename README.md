@@ -26,10 +26,10 @@ Pour le sprint 1 :
 
 | Équipe     | Rôle   | Missions                                                                                      |
 | ---------- | ------ | --------------------------------------------------------------------------------------------- |
-| Arnaud     | PO     | Configuratiion de la VM Client, Création de la documentation générale, Installation de John   |
-| Christophe | SM     | Recherche sur les logiciels, Création des documentations User et Admin, Installation de John  |
-| Charlène   | Membre | Recherche sur les logiciels, Installation de John, Création de la présentation                |
-| Mahmoud    | Membre | Configuration de la VM Serveur, Installation de John                                          |
+| Arnaud     | PO     | Configuration de la VM Client, Création de la documentation générale, Installation de John et des VM  |
+| Christophe | SM     | Recherche sur les logiciels, Création des documentations User et Admin, Installation de John et des VM  |
+| Charlène   | Membre | Recherche sur les logiciels, Installation de John et des VM, Création de la présentation                |
+| Mahmoud    | Membre | Configuration de la VM Serveur, Installation de John et des VM                                        |
 
 Pour le sprint 2 :
 
