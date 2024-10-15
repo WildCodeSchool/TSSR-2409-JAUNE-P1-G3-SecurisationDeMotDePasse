@@ -49,7 +49,7 @@ Pour le sprint 2 :
 
 Le choix du Serveur a été imposé par le client : Windows Server 2022.  
 Le choix due l'OS Client a été imposé par le client : Ubuntu. Nous avons priviligié Ubuntu 22.04 LTS car, en service depuis plusieurs années, elle présente de plus fortes probabilitéss d'être présente sur une machine client.   
-Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonctionnalité d'autodétection des fonctions de hachage utilisées pour stocker les mots de passe,plus ancien et plus soutenu, et il propose de nombreuse fonctions de hachage, tel que:
+Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonctionnalité d'autodétection des fonctions de hachage utilisées pour stocker les mots de passe. Il est utilisé par une importante communauté et il propose de nombreuse fonctions de hachage, tel que:
 - Les algorithmes classiques :
   - MD5
   - SHA (différentes variantes)
@@ -57,13 +57,13 @@ Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonct
   - DES traditionnel
   - Blowfish
 - Hachages spécifiques aux systèmes :
- - Windows LM (DES-based)
- -  NTLM (pour les versions récentes de Windows)
- -  erberos/AFS
- -  FreeBSD MD5-based (utilisé aussi par Linux et Cisco IOS)
- -  OpenBSD Blowfish-based
- -  SHA-crypt (utilisé par les versions récentes de Fedora et Ubuntu)
- -  SUNMD5 (utilisé par Solaris)
+  - Windows LM (DES-based)
+  -  NTLM (pour les versions récentes de Windows)
+  -  erberos/AFS
+  -  FreeBSD MD5-based (utilisé aussi par Linux et Cisco IOS)
+  -  OpenBSD Blowfish-based
+  -  SHA-crypt (utilisé par les versions récentes de Fedora et Ubuntu)
+  -  SUNMD5 (utilisé par Solaris)
 
 ### 5- Difficultés rencontrées : problèmes techniques rencontrés
 
