@@ -4,7 +4,7 @@
 ### **1- Présentation du projet, objectifs finaux**
 Le projet est d'installer un logiciel de décryptage de mot de passe, John The Ripper, sur une machine Client, connecté à un Serveur et d'effectuer une attaque par dictionnaire sur le mot de passe d'un dossier zip sur un serveur.  
 
-John The Ripper est   ????
+John The Ripper (souvent abrégé JtR ou John) est un logiciel libre  et [open source](https://github.com/openwall/john) de cassage de mots de passe développé à l'origine pour les systèmes Unix. Il est désormais disponible sur de nombreuses plateformes, dont Windows, Linux et macOS. Il s'agit d'un puissant outil de craquage de mots de passe largement utilisé dans le domaine de la sécurité informatique.
 
 
 Les **objectifs** sont :  
@@ -19,6 +19,11 @@ L'**objectif final** est de sensibiliser les utilisateurs à l'utilisation de mo
 
 
 ### 2- Introduction : mise en contexte
+John the Ripper est couramment utilisé pour :
+
+  -  Tester la robustesse des mots de passe dans le cadre d'audits de sécurité
+  -  Récupérer des mots de passe perdus
+  -  Démontrer les risques liés aux mots de passe faibles
 
 ### 3- Membres du groupe de projet 
 
@@ -35,16 +40,30 @@ Pour le sprint 2 :
 
 | Équipe     | Rôle   | Missions                                                                                      |
 | ---------- | ------ | --------------------------------------------------------------------------------------------- |
-| Arnaud     | PO     |     |
-| Christophe | SM     |   |
-| Charlène   | Membre |                 |
-| Mahmoud    | Membre |       |
+| Arnaud     | Member  |     |
+| Christophe | Member |   |
+| Charlène   | SM     |                 |
+| Mahmoud    | PO     |       |
 
 ### 4- Choix techniques 
 
 Le choix du Serveur a été imposé par le client : Windows Server 2022.  
 Le choix due l'OS Client a été imposé par le client : Ubuntu. Nous avons priviligié Ubuntu 22.04 LTS car, en service depuis plusieurs années, elle présente de plus fortes probabilitéss d'être présente sur une machine client.   
-Le choix du logiciel s'est porté sur John The Ripper car il est plus ancien et plus soutenu, et il propose plus de fonctions de hachage, en particulier le Yescript, et 
+Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonctionnalité d'autodétection des fonctions de hachage utilisées pour stocker les mots de passe,plus ancien et plus soutenu, et il propose de nombreuse fonctions de hachage, tel que:
+- Les algorithmes classiques :
+  - MD5
+  - SHA (différentes variantes)
+  - UNIX crypt(3)
+  - DES traditionnel
+  - Blowfish
+- Hachages spécifiques aux systèmes :
+ - Windows LM (DES-based)
+ -  NTLM (pour les versions récentes de Windows)
+ -  erberos/AFS
+ -  FreeBSD MD5-based (utilisé aussi par Linux et Cisco IOS)
+ -  OpenBSD Blowfish-based
+ -  SHA-crypt (utilisé par les versions récentes de Fedora et Ubuntu)
+ -  SUNMD5 (utilisé par Solaris)
 
 ### 5- Difficultés rencontrées : problèmes techniques rencontrés
 
