@@ -52,7 +52,7 @@ Cela affichera la version installée de John the Ripper.
 
 ### -*Configuration*
 - création alias zip2john
-  cration de l'alias en tapant la commande suivante dans le terminal :
+  cration de l'alias en tapant la commande suivante dans le terminal :```sudo snap alias john-the-ripper.zip2john zip2john```
 
 ![image](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/INSTALL3.png)
   
