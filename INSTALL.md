@@ -27,9 +27,33 @@ Il faut connaître les commandes en ligne de John the Ripper pour craquer les mo
 ---
 ## Installation et configuration 
 
-### -*Installation*  
+### -*Installation* 
+1. Mise à jour du système
+Avant d'installer un nouveau logiciel, il est recommandé de mettre à jour votre système pour vous assurer que vous disposez des dernières versions des paquets. Ouvrez un terminal et exécutez la commande suivante :
+
+![image](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Capture%20d%E2%80%99%C3%A9cran%20dinstall%20john-the%20ripper%204.png)
+
+3. Installation de John the Ripper à partir des dépôts Ubuntu
+John the Ripper est disponible dans les dépôts officiels d'Ubuntu. Vous pouvez l'installer directement à partir de ces dépôts avec la commande suivante :
+ 
+![image](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Capture%20d%E2%80%99%C3%A9cran%20dinstall%20john-the%20ripper2.png)
+
+5. Vérification de l'installation
+Une fois installé, vous pouvez vérifier si John the Ripper est correctement installé en tapant la commande suivante dans le terminal :
+
+![image](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Capture%20d%E2%80%99%C3%A9cran%20d'install%20john-the-ripper%206.png)
+
+Cela affichera la version installée de John the Ripper.
+
+![image](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Capture%20d%E2%80%99%C3%A9cran%20d'install%20john-the-ripper%205%20.png)
+
 
 ### -*Configuration*
+- création alias zip2john
+  cration de l'alias en tapant la commande suivante dans le terminal :
+
+![image](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/INSTALL3.png)
+  
 
 ---
 ## FAQ
