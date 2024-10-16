@@ -67,21 +67,21 @@ Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonct
 
 ### 5- Difficultés rencontrées : problèmes techniques rencontrés
   
-  1- Problème rencontré concernant l'accès aux fichiers .zip protégés par mots de passe, qui sont stocké sur le serveur Windows depuis la machine cliente.
+  - 1 Problème rencontré concernant l'accès aux fichiers .zip protégés par mots de passe, qui sont stocké sur le serveur Windows depuis la machine cliente.
     
-  2- Problème rencontré avec l'utilisation des différentes versions de VirtualBox. Incapacité à partager les images OVA des machines virtuelles et ainsi bénéficier d'une version commune du Lab pour effectuer les tests d'utilisation de JTH.
+  - 2 Problème rencontré avec l'utilisation des différentes versions de VirtualBox. Incapacité à partager les images OVA des machines virtuelles et ainsi bénéficier d'une version commune du Lab pour effectuer les tests d'utilisation de JTH.
     
 ### 6- Solutions trouvées : Solutions et alternatives trouvées
   
-  1- La solution choisie consiste à créer un dossier partagé entre les deux machines virtuelles qui permet au client de récupérer les fichiers à craquer, à l'aide de JtH.
+  - 1 La solution choisie consiste à créer un dossier partagé entre les deux machines virtuelles qui permet au client de récupérer les fichiers à craquer, à l'aide de JtH.
     
-  2- La solution choisie a été de créer des machines virtuelles individuelles pour pouvoir réaliser les tests du logiciel de manière locale.
+  - 2 La solution choisie a été de créer des machines virtuelles individuelles pour pouvoir réaliser les tests du logiciel de manière locale.
 
 ### 7- Améliorations possibles
 
-  1- 
+  - 1 
   
-  2- L'amélioration possible serait de revenir à une version antérieure commune qui présenterait une plus grande stabilité.
+  - 2 L'amélioration possible serait de revenir à une version antérieure commune qui présenterait une plus grande stabilité.
 
 Préparation des fichiers de dictionnaire:Téléchargez ou créez des fichiers de dictionnaire contenant les mots de passe à tester.
 ##### Utilisation de John the Ripper
