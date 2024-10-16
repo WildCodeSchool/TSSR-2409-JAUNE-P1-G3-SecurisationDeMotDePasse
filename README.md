@@ -40,10 +40,10 @@ Pour le sprint 2 :
 
 | Équipe     | Rôle   | Missions                                                                                      |
 | ---------- | ------ | --------------------------------------------------------------------------------------------- |
-| Arnaud     | Member |     |
-| Christophe | Member |   |
-| Charlène   | SM     |                 |
-| Mahmoud    | PO     |       |
+| Arnaud     | Member | Test de John-The-Ripper, finalisation de INSTALL.md    |
+| Christophe | Member | Test de John-The-Ripper, finalisation du README.md  |
+| Charlène   | SM     | Test d'une attaque sur compte local, finalisation de USER_GUIDE.md                |
+| Mahmoud    | PO     | Aide à la rédaction des livrables, création de la présentation      |
 
 ### 4- Choix techniques 
 
@@ -79,15 +79,6 @@ Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonct
 
 ### 7- Améliorations possibles
 
-  - 1 
-  
-  - 2 L'amélioration possible serait de revenir à une version antérieure commune qui présenterait une plus grande stabilité.
-
-Préparation des fichiers de dictionnaire:Téléchargez ou créez des fichiers de dictionnaire contenant les mots de passe à tester.
-##### Utilisation de John the Ripper
-###### 1- Utilisation de John the Ripper :Exécutez John the Ripper avec le hash extrait et le fichier de dictionnaire.
-
- 3-Extraction du hash : Utilisez un outil John the Ripper pour extraire le hash du fichier zippé, ce qui permet à John the Ripper de l'analyser.
-###### 4-Préparation des fichiers de dictionnaire:Téléchargez ou créez des fichiers de dictionnaire contenant les mots de passe à tester.
-##### Utilisation de John the Ripper
-###### 1- Utilisation de John the Ripper :Exécutez John the Ripper avec le hash extrait et le fichier de dictionnaire.
+Il faudrait améliorer l'attaque sur un mot de passe du compte local, qui reste sans résultat.  
+Nous pourrions créer un script pour automatiser la vérification du mot de passe d'un compte local.
+Nous pourrions également créer un script pour scanner les mots de passe des dossiers du serveur, et ainsi informer les propriétaires des failles et de l'importance d'un mot de passe robuste.
