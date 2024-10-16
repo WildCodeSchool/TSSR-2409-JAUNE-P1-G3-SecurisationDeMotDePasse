@@ -1,12 +1,12 @@
 ![Logo John the Ripper](Images/JtR.png)
 
-# DOCUMENTATION UTILISATEUR
+# <p align="center"> DOCUMENTATION UTILISATEUR </p>
 
 ## Notions juridiques
 
 ### Code pénal: Livre III : Des crimes et délits contre les biens (Articles 311-1 à 324-9)
 
-#### Chapitre III : Des atteintes aux systèmes de traitement automatisé de données (Articles 323-1 à 323-8)
+Chapitre III : Des atteintes aux systèmes de traitement automatisé de données (Articles 323-1 à 323-8)
 
  - **Article 323-1** (Modifié par LOI n°2023-22 du 24 janvier 2023 - art. 6)
     - Le fait d'accéder ou de se maintenir, frauduleusement, dans tout ou partie d'un système de traitement automatisé de données est puni de trois ans d'emprisonnement et de 100 000 € d'amende.
@@ -29,15 +29,15 @@
     (Source: [Legifrance.gouv.fr](https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070719/LEGISCTA000006117598/#LEGISCTA000006117598))
 
 
-## Utilisation de base :
+## Utilisation de base
 
-Il faut plusieurs étapes our vérifier la robustesse du mot de passe d'un fichier zippé. 
+Il faut plusieurs étapes pour vérifier la robustesse du mot de passe d'un fichier zippé. 
 Allez tout d'abord dans votre Terminal Linux.  
 
-La première est d'extraire le mot de passe de votre fichier (ici pour l'exemple, ``` dossier.zip ```. Pour cela, utilisez : ```zip2john dossier.zip > hash.txt ```.
+La première est d'extraire le mot de passe de votre fichier (ici pour l'exemple, ``` dossier.zip ```). Pour cela, utilisez : ```zip2john dossier.zip > hash.txt ```.
 ![Première commande à effectuer](Images/Base_Etape1.png)
 
-Pour information, ton nouveau fichier ``hash.txt``` devrait ressembler à ceci :
+Pour information, ton nouveau fichier ```hash.txt``` devrait ressembler à ceci :
 ![Hash.txt](Images/Base_Etape1_pourinfo.png)
 
 La deuxième est de lancer la commande ```john hash.txt ```.
@@ -54,14 +54,41 @@ On peut voir dans cet exemple que le mot de passe était Azerty1* et qu'il a ét
 On peut voir ici que John-the-ripper était en train d'utiliser son dernier mode d'attaque, le mode incrémentiel.
 
 
-## Utilisation avancée :
+## Utilisation avancée 
 
-1. Lancer une attaque uniquement avec le mode simple : ```john --s hash.txt ```  
-2. Lancer une attaque uniquement avec le mode dictionnaire ```john --w hash.txt ```
-3. Voir l'aide de John-the-ripper : ```john -h```
+### Options avancées
+1. Lancer une attaque uniquement avec le mode simple : ```john --single hash.txt ```  
+   ![Mode simple](Images/User_Guide/Use_Single.png)
+2. Lancer une attaque uniquement avec le mode dictionnaire : ```john -w hash.txt ```  
+   ![Attaque par dictionnaire ](Images/User_Guide/Use_W.png)
+3. Lancer un attaque uniquement avec le mode dictionnaire et une liste de mots choisie : ```john -w=/PATH/LISTE hash.txt```  
+   ![Attaque par dictionnaire choisi](Images/User_Guide/Use_Wchoisi.png)
+4. Voir le mot de passe trouvé : ```john --show hash.txt```  
+   ![john --show](Images/User_Guide/Use_show.png)
+5. Déterminer la longueur N du mot de passe à trouver : ```john --length=N hash.txt```  
+   ![Longueur déterminée](Images/User_Guide/Use_Length.png)
+6.  Voir l'aide de John-the-ripper : ```john -h```  
 
+### Lancer une attaque contre un compte local
 
-## FAQ :
-- solutions aux problèmes connus et communs liés à l’utilisation
-- No hashes loaded
-- Zip2john not found
+Dans le terminal Linux: 
+- créer deux fichiers hash.txt et hash_user.txt : ```touch hash.txt hash_user.txt```
+- changer les droits de ces deux fichiers : ```chmod 700 hash.txt && chmod 700 hash_user.txt```
+- extraire le hash de ces fichiers : ```sudo samdump2 FICHIER_SYSTEM FICHIER_SAM > hash.txt```
+- extraire la ligne du compte à tester grâce à son nom : ```sudo grep $USERNAME hash.txt > hash_user.txt```
+- lancer john sur ce hash : ```john --format=NT hash_user.txt```
+![Attaque contre un compte local](Images/User_Guide/AttaqueCompteLocal.png)
+  
+
+## FAQ
+" Quand je lance zip2john, on me dit que "zip2john not found". "   
+Il faut vérifier que l'alias a bien été créé, se reférer au INSTALL.md .
+
+" Quand je lance John, j'ai ``Ǹo password hashes laoded`` ou ```No password hashes left to crack```."   
+Plusieurs raisons possibles :  
+- Votre fichier hash.txt peut être vide ou ne pas contenir de mot de passe.  
+- Vous avez peut être déjà décrypté votre fichier.  
+- Pour d'autres raisons, rendez-vous sur cette [FAQ](https://www.openwall.com/john/doc/FAQ.shtml).
+
+Pour d'autres questions, vérifiez la [FAQ](https://www.openwall.com/john/doc/FAQ.shtml).
+
