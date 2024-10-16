@@ -6,10 +6,10 @@
 
 1. Connaissances minimales à travailler sur un terminal sous linux
 2. Un serveur:
-windows server 2022, identifié SERVWIN01, sous le compte: Administrator avec le mot de passe Azerty1* et l'adresse IP fixe: 172.16.10.10 en masque sous réseau: 255.255.255.0,
+windows server 2022, identifié SRVWIN01, sous le compte: Administrator avec le mot de passe Azerty1* et l'adresse IP fixe: 172.16.10.10 en masque sous réseau: 255.255.255.0,
 installation dessus pour récuperer les fichiers "PsExec" (voire configuration).
 3. un client:
-Sous ubuntu 22.04, identifié clilin01, sous le compte utilisateur: wilder avec le mot de passe Azerty1* et l'adresse IP fixe: 172.16.10.20 en masque sous réseau: 255.255.255.0, installation dessus "samdump2" (voire configuration). 
+Sous ubuntu 22.04, identifié CLILIN01, sous le compte utilisateur: wilder avec le mot de passe Azerty1* et l'adresse IP fixe: 172.16.10.20 en masque sous réseau: 255.255.255.0, installation dessus "samdump2" (voire configuration). 
 4. Systèmes d'exploitation supportés :
 Linux/Unix : John the Ripper a été initialement conçu pour fonctionner sur ces systèmes (Ubuntu, Debian, Fedora, etc.).
 Windows : Il existe des versions adaptées pour Windows, mais l'utilisation est souvent plus fluide sous Linux.
