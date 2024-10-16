@@ -5,39 +5,33 @@
 ## Prérequis techniques
 
 1. Connaissances minimales à travailler sur un terminal sous linux
-  
 2. Un serveur:
-windows server 2022, identifié SRVWIN01, sous le compte: Administrator avec le mot de passe Azerty1* et l'adresse IP fixe: 172.16.10.10 en masque sous réseau: 255.255.255.0,
-installation dessus pour récuperer les fichiers "PsExec" (voire configuration).
-  
+windows server 2022, identifié SRVWIN01, sous le compte: Administrator avec le mot de passe Azerty1* et l'adresse IP fixe: 172.16.10.10 en masque sous réseau: 255.255.255.0.
+ - Création d'un dossier partagé (voire configuration).
+ - Installation pour récuperer les fichiers "PsExec" (voire configuration).
 3. un client:
-Sous ubuntu 22.04, identifié CLILIN01, sous le compte utilisateur: wilder avec le mot de passe Azerty1* et l'adresse IP fixe: 172.16.10.20 en masque sous réseau: 255.255.255.0, installation dessus "samdump2" (voire configuration). 
-  
+Sous ubuntu 22.04, identifié CLILIN01, sous le compte utilisateur: wilder avec le mot de passe Azerty1* et l'adresse IP fixe: 172.16.10.20 en masque sous réseau: 255.255.255.0.
+ - Configurer ubuntu pour accèder aux fichiers partagés (voire configuration). 
+ - Installation "samdump2" (voire configuration). 
 4. Systèmes d'exploitation supportés :
 Linux/Unix : John the Ripper a été initialement conçu pour fonctionner sur ces systèmes (Ubuntu, Debian, Fedora, etc.).
 Windows : Il existe des versions adaptées pour Windows, mais l'utilisation est souvent plus fluide sous Linux.
 macOS : Peut être utilisé avec les bons outils de compilation.
-  
 5. Dépendances :
 Compilateur : Si vous compilez à partir du code source, vous aurez besoin d’un compilateur comme gcc sur Linux ou Xcode sur macOS. Sur Windows, il peut nécessiter Cygwin ou MinGW.
 OpenSSL : Pour les algorithmes de hachage spécifiques, l'outil peut s'appuyer sur OpenSSL.
 Git : Si vous téléchargez la version depuis le dépôt GitHub.
-  
 6. Matériel :
 Processeur multicœur : John the Ripper est capable de tirer parti de plusieurs cœurs CPU.
 GPU (optionnel) : Des versions comme John the Ripper Jumbo supportent l’utilisation de GPU via OpenCL ou CUDA pour accélérer le craquage de mots de passe.
 RAM : Plus vous avez de RAM, plus vous pouvez gérer des fichiers de hachage volumineux.
-  
 7. Versions spécifiques :
 John the Ripper standard : Pour les besoins basiques de test de mots de passe.
 John the Ripper Jumbo : Cette version est enrichie de nombreux patchs et supporte un plus grand nombre d'algorithmes et de formats de fichiers (MD5, SHA-1, NTLM, etc.).
-  
 8. Algorithmes supportés :
 MD5, SHA-1, SHA-256, bcrypt, DES, NTLM, Kerberos, et bien d’autres.
-  
 9. Accès à un fichier de hachage :
 John the Ripper ne fonctionne pas directement sur des mots de passe en clair mais sur des fichiers contenant des hashs (comme /etc/shadow sous Linux, ou des dumps de bases de données).
-  
 10. Commandes de base :
 Il faut connaître les commandes en ligne de John the Ripper pour craquer les mots de passe, lancer des attaques par dictionnaire ou par force brute(allez voir USER_GUIDE).
 ---
@@ -68,10 +62,70 @@ Cela affichera la version installée de John the Ripper.
 
 ### -*Configuration*
 
-- création alias 'zip2john' en tapant la commande suivante dans le terminal :```sudo snap alias john-the-ripper.zip2john zip2john```
+- Création fichier partagé sous WRVWIN01 à la racine de C:     
+ .Cliquer sur File and Storage Service
+![Image_Creation_dossier_Partage1](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage1.png)          .Cliquer sur shares
+![Image_Creation_dossier_Partage2](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage2.png)         
+ .Cliquer sur TASK et New Share
+![Image_Creation_dossier_Partage3](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage3.png)         
+ .Sélection SMB Share - Quick puis cliquer next
+![Image_Creation_dossier_Partage4](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage4.png)         
+ .Dans Type a custom path  C:\ cliquer next
+![Image_Creation_dossier_Partage7](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage7.png)
+ .Donner le nom du dossier à partagé "Partage"
+![Image_Creation_dossier_Partage8](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage8.png)
+ .Selectionner Enable acces-based enumeration puis cliquer next
+![Image_Creation_dossier_Partage9](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage9.png)
+ .Permissions cliquer next
+![Image_Creation_dossier_Partage10](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage10.png)
+ .Cliquer create
+![Image_Creation_dossier_Partage11](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage11.png)
+  
+- Installation pour récuperer les fichiers "PsExec"
+ .Telecharger le fichier"PsExec" sur le lien suivant:(https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec)
+ .Ouvrir le cmd: taper dans la barre de recherche ```cmd```![install_Psexec1](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/install_Psexec1.png)
+ .Dans le prompt,  taper la commande suivante ```C:\Users\Administrator\Desktop\psexec.exe -i -s cmd.exe```![install_Psexec2](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/install_Psexec2.png)
+ .Une fenêtre va s'ouvrir cliquer sur "Agree"![install_Psexec3](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/install_Psexec3.png)
+ .Un prompt va s'ouvrir taper:```reg save hklm\sam c:\Partage\sam```![install_Psexec4](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/install_Psexec4.png)
+ .Dans ce même prompt taper: ```reg save hklm\system c:\Partage\system```![install_Psexec6](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/install_Psexec6.png)
+ .Fermer les prompts.
+  
+- Configuration ubuntu pour accèder aux fichiers partagés:
+
+  Mise à jour système taper:```sudo apt update && sudo apt upgrade -y```![mise a jour](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Capture%20d%E2%80%99%C3%A9cran%20dinstall%20john-the%20ripper%204.png)
+  
+  Installer cifs-utils ```sudo apt install cifs-utils```
+![image_Partage Etape1](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Partage_etape1.png).
+  Créer dossier mnt/partage ```sudo mkdir /mnt/partage```
+![image_Partage Etape2](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Partage_etape2.png)
+  Monter cifs dans dossier de partage ```sudo mount -t cifs //172.10.10/Partage/ -o credentials=/home/wilder/credential```
+![image_Partage_Etape3](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Partage_Etape3.png).
+  Modifier le fichier fstab ```sudo nano /etc/fstab```
+![image_Partage_Etape4](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Partage_etape4.png).
+  Dans le dossier fstab inserrer en bas en commentaire```#Partage```puis ```//172.16.10.10/Partage /home/wilder/Partage  cifs credentials=/home/wilder/credential,uid=1000,gid=1000 0       0```
+![image_Partage_Etape5](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Partage_etape5.png).
+
+- Exècuter "samdump2":
+  Dans un terminal taper: ```sudo apt install samdump2```
+![Exécuter_"samdump2"1](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Ex%C3%A9cuter_%22samdump2%221.png).
+
+  puis:```samdump2 /home/wilder/Partage/system /home/wilder/Partage/sam > hash.txt``` 
+ ![Exécuter_"samdump2"3](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Ex%C3%A9cuter_%22samdump2%223.png)
+
+  puis:```john hash.txt```     
+ .![Exécuter_"samdump2"4](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Ex%C3%A9cuter_%22samdump2%224.png)
+ 
+
+- création alias 'zip2john'
+  en tapant la commande suivante dans le terminal :```sudo snap alias john-the-ripper.zip2john zip2john```
 
 ![image](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/INSTALL3.png)
   
 
 ---
 ## FAQ
+installation john-the-ripper erreur en tapant la commande ```sudo apt intall john-the-ripper```
+![erreur instal jtr](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Capture%20d%E2%80%99%C3%A9cran%20install%20john-the%20-ripper%201.png)
+installer john the ripper avec la commande```sudo snap install john-the-ripper```
+ 
+![image](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Capture%20d%E2%80%99%C3%A9cran%20dinstall%20john-the%20ripper2.png)
