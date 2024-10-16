@@ -18,14 +18,14 @@ Les **objectifs** sont :
 L'**objectif final** est de sensibiliser les utilisateurs à l'utilisation de mots de passe forts.  
 
 
-### 2- Introduction : mise en contexte
+### **2- Introduction : mise en contexte**
 John the Ripper est couramment utilisé pour :
 
   -  Tester la robustesse des mots de passe dans le cadre d'audits de sécurité
   -  Récupérer des mots de passe perdus
   -  Démontrer les risques liés aux mots de passe faibles
 
-### 3- Membres du groupe de projet 
+### **3- Membres du groupe de projet**
 
 Pour le sprint 1 : 
 
@@ -40,7 +40,7 @@ Pour le sprint 2 :
 
 | Équipe     | Rôle   | Missions                                                                                      |
 | ---------- | ------ | --------------------------------------------------------------------------------------------- |
-| Arnaud     | Member  |     |
+| Arnaud     | Member |     |
 | Christophe | Member |   |
 | Charlène   | SM     |                 |
 | Mahmoud    | PO     |       |
@@ -66,15 +66,22 @@ Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonct
   -  SUNMD5 (utilisé par Solaris)
 
 ### 5- Difficultés rencontrées : problèmes techniques rencontrés
-
+  
+  1- Problème rencontré concernant l'accès aux fichiers .zip protégés par mots de passe, qui sont stocké sur le serveur Windows depuis la machine cliente.
+    
+  2- Problème rencontré avec l'utilisation des différentes versions de VirtualBox. Incapacité à partager les images OVA des machines virtuelles et ainsi bénéficier d'une version commune du Lab pour effectuer les tests d'utilisation de JTH.
+    
 ### 6- Solutions trouvées : Solutions et alternatives trouvées
+  
+  1- La solution choisie consiste à créer un dossier partagé entre les deux machines virtuelles qui permet au client de récupérer les fichiers à craquer, à l'aide de JtH.
+    
+  2- La solution choisie a été de créer des machines virtuelles individuelles pour pouvoir réaliser les tests du logiciel de manière locale.
 
 ### 7- Améliorations possibles
 
-
-
-
-
+  1- 
+  
+  2- L'amélioration possible serait de revenir à une version antérieure commune qui présenterait une plus grande stabilité.
 
 Préparation des fichiers de dictionnaire:Téléchargez ou créez des fichiers de dictionnaire contenant les mots de passe à tester.
 ##### Utilisation de John the Ripper
