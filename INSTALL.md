@@ -62,25 +62,36 @@ Cela affichera la version installée de John the Ripper.
 
 ### -*Configuration*
 
-- Création fichier partagé sous WRVWIN01 à la racine de C:     
- .Cliquer sur File and Storage Service
-![Image_Creation_dossier_Partage1](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage1.png)          .Cliquer sur shares
-![Image_Creation_dossier_Partage2](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage2.png)         
- .Cliquer sur TASK et New Share
-![Image_Creation_dossier_Partage3](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage3.png)         
- .Sélection SMB Share - Quick puis cliquer next
-![Image_Creation_dossier_Partage4](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage4.png)         
- .Dans Type a custom path  C:\ cliquer next
-![Image_Creation_dossier_Partage7](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage7.png)
- .Donner le nom du dossier à partagé "Partage"
-![Image_Creation_dossier_Partage8](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage8.png)
- .Selectionner Enable acces-based enumeration puis cliquer next
-![Image_Creation_dossier_Partage9](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage9.png)
- .Permissions cliquer next
-![Image_Creation_dossier_Partage10](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage10.png)
- .Cliquer create
-![Image_Creation_dossier_Partage11](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage11.png)
+- Création fichier partagé sous WRVWIN01 à la racine de C:
+     
+ .Cliquer sur File and Storage Service  
+![Image_Creation_dossier_Partage1](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage1.png)
   
+.Cliquer sur shares  
+![Image_Creation_dossier_Partage2](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage2.png)
+  
+ .Cliquer sur TASK et New Share  
+![Image_Creation_dossier_Partage3](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage3.png)
+  
+ .Sélection SMB Share - Quick puis cliquer next  
+![Image_Creation_dossier_Partage4](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage4.png) 
+  
+ .Dans Type a custom path  C:\ cliquer next  
+![Image_Creation_dossier_Partage7](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage7.png)
+  
+ .Donner le nom du dossier à partagé "Partage"  
+![Image_Creation_dossier_Partage8](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage8.png)
+  
+ .Selectionner Enable acces-based enumeration puis cliquer next  
+![Image_Creation_dossier_Partage9](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage9.png)
+  
+ .Permissions cliquer next  
+![Image_Creation_dossier_Partage10](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage10.png)
+  
+ .Cliquer create  
+![Image_Creation_dossier_Partage11](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage11.png)
+
+    
 - Installation pour récuperer les fichiers "PsExec"
  .Telecharger le fichier"PsExec" sur le lien suivant:(https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec)
  .Ouvrir le cmd: taper dans la barre de recherche ```cmd```![install_Psexec1](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/install_Psexec1.png)
