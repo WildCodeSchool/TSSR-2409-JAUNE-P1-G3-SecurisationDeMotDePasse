@@ -1,7 +1,11 @@
+![Logo John the Ripper](Images/JtR.png)
+  
 # TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse
+  
 ## Sécurisation de mot de passe
 
 ### **1- Présentation du projet, objectifs finaux**
+  
 Le projet est d'installer un logiciel de décryptage de mot de passe, John The Ripper, sur une machine Client, connecté à un Serveur et d'effectuer une attaque par dictionnaire sur le mot de passe d'un dossier zip sur un serveur.  
 
 [John The Ripper](https://github.com/openwall/john) (souvent abrégé JtR ou John) est un logiciel libre  et open source de cassage de mots de passe développé à l'origine pour les systèmes Unix. Il est désormais disponible sur de nombreuses plateformes, dont Windows, Linux et macOS. Il s'agit d'un puissant outil de craquage de mots de passe largement utilisé dans le domaine de la sécurité informatique.
@@ -19,6 +23,7 @@ L'**objectif final** est de sensibiliser les utilisateurs à l'utilisation de mo
 
 
 ### **2- Introduction : mise en contexte**
+  
 John the Ripper est couramment utilisé pour :
 
   -  Tester la robustesse des mots de passe dans le cadre d'audits de sécurité
