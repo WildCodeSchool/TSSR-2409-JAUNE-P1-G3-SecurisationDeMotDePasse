@@ -71,7 +71,8 @@ Cela affichera la version installée de John the Ripper.
 
 - Création d'un fichier partagé sous WRVWIN01 à la racine de C:
      
- .Cliquer sur File and Storage Service  
+ .Cliquer sur File and Storage Service 
+ 
 ![Image_Creation_dossier_Partage1](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/Creation_dossier_Partage1.png)
   
 .Cliquer sur shares  
