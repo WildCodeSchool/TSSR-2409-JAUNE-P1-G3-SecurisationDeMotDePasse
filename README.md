@@ -74,11 +74,11 @@ Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonct
   
   - 1 Problème rencontré concernant l'accès aux fichiers .zip protégés par mots de passe, qui sont stocké sur le serveur Windows depuis la machine cliente.
     
-  - 2 Problème rencontré avec l'utilisation des différentes versions de VirtualBox. Incapacité à partager les images OVA des machines virtuelles et ainsi bénéficier d'une version commune du Lab pour effectuer les tests d'utilisation de JTH.
+  - 2 Problème rencontré avec l'utilisation des différentes versions de VirtualBox. Incapacité à partager les images OVA des machines virtuelles et ainsi bénéficier d'une version commune du Lab pour effectuer les tests d'utilisation de JtR.
     
 ### 6- Solutions trouvées 
   
-  - 1 La solution choisie consiste à créer un dossier partagé entre les deux machines virtuelles qui permet au client de récupérer les fichiers à craquer, à l'aide de JtH.
+  - 1 La solution choisie consiste à créer un dossier partagé entre les deux machines virtuelles qui permet au client de récupérer les fichiers à craquer, à l'aide de JtR.
     
   - 2 La solution choisie a été de créer des machines virtuelles individuelles pour pouvoir réaliser les tests du logiciel de manière locale.
 
