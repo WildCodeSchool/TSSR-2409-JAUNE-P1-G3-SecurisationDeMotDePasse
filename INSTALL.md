@@ -1,4 +1,4 @@
-![Logo John the Ripper](Images/JtR.png)
+<p align="center"><img src=Images/JtR.png ></p>
 
 # <p align="center">  DOCUMENTATION ADMINISTRATEUR </p>
 
