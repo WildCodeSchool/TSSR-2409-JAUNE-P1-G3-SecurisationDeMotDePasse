@@ -47,7 +47,7 @@ Pour le sprint 2 :
 | ---------- | ------ | --------------------------------------------------------------------------------------------- |
 | Arnaud     | Member | Test de John-The-Ripper, finalisation de INSTALL.md    |
 | Christophe | Member | Test de John-The-Ripper, finalisation du README.md  |
-| Charlène   | SM     | Test d'une attaque sur compte local, finalisation de USER_GUIDE.md                |
+| Charlène   | SM     | Test d'une attaque sur compte local, finalisation de USER_GUIDE.md, tests, démo,présentation |
 | Mahmoud    | PO     | Aide à la rédaction des livrables, création de la présentation      |
 
 ### 4- Choix techniques 
@@ -70,13 +70,13 @@ Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonct
   -  SHA-crypt (utilisé par les versions récentes de Fedora et Ubuntu)
   -  SUNMD5 (utilisé par Solaris)
 
-### 5- Difficultés rencontrées : problèmes techniques rencontrés
+### 5- Difficultés rencontrées 
   
   - 1 Problème rencontré concernant l'accès aux fichiers .zip protégés par mots de passe, qui sont stocké sur le serveur Windows depuis la machine cliente.
     
   - 2 Problème rencontré avec l'utilisation des différentes versions de VirtualBox. Incapacité à partager les images OVA des machines virtuelles et ainsi bénéficier d'une version commune du Lab pour effectuer les tests d'utilisation de JTH.
     
-### 6- Solutions trouvées : Solutions et alternatives trouvées
+### 6- Solutions trouvées 
   
   - 1 La solution choisie consiste à créer un dossier partagé entre les deux machines virtuelles qui permet au client de récupérer les fichiers à craquer, à l'aide de JtH.
     
