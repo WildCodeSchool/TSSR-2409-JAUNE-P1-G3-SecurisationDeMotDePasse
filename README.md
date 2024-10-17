@@ -1,4 +1,4 @@
-![Logo John the Ripper](Images/JtR.png)
+<p align="center"><img src=Images/JtR.png ></p>
   
 # TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse
   
