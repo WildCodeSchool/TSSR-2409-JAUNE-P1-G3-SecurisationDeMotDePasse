@@ -91,7 +91,8 @@ Cela affichera la version installée de John the Ripper.
        
 - Installation pour récuperer les fichiers "PsExec"   
  .Telecharger le fichier"PsExec" sur le lien suivant:(https://learn.microsoft.com/fr-fr/sysinternals/downloads/psexec)   
- .Ouvrir le cmd: taper dans la barre de recherche ```cmd```![install_Psexec1](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/install_Psexec1.png)
+ .Ouvrir le cmd: taper dans la barre de recherche ```cmd```  
+![install_Psexec1](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/install_Psexec1.png)
   
  .Dans le prompt,  taper la commande suivante ```C:\Users\Administrator\Desktop\psexec.exe -i -s cmd.exe```![install_Psexec2](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/main/Images/install_Psexec2.png)  
  
