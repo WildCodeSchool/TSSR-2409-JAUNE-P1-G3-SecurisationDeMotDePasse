@@ -47,7 +47,7 @@ Pour le sprint 2 :
 | ---------- | ------ | --------------------------------------------------------------------------------------------- |
 | Arnaud     | Member | Test de John-The-Ripper, finalisation de INSTALL.md    |
 | Christophe | Member | Test de John-The-Ripper, finalisation du README.md  |
-| Charlène   | SM     | Test d'une attaque sur compte local, finalisation de USER_GUIDE.md, tests, démo,présentation |
+| Charlène   | SM     | Tests d'attaques (zip et cpt local), finalisation de USER_GUIDE.md, démonstration   |
 | Mahmoud    | PO     | Aide à la rédaction des livrables, création de la présentation      |
 
 ### 4- Choix techniques 
@@ -90,4 +90,4 @@ Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonct
 
   - Nous pourrions également créer un script pour scanner les mots de passe des dossiers du serveur, et ainsi informer les propriétaires des failles et de l'importance d'un mot de passe robuste.
 
-  - Il pourrait être intéressant d'automatiser une mise à jour du dictionnaire utilisé par JtR. L'idée serait de récupérer de nouveaux dictionnaires, en prélever les mots de passe absents de sa liste actuelle pour les implémenter et ainsi enrichir sa base de test.
+  - Il pourrait être intéressant d'automatiser une mise à jour du dictionnaire utilisé par JtR. L'idée serait de récupérer de nouveaux dictionnaires, d'en prélever les mots de passe absents de sa liste actuelle pour les implémenter et ainsi enrichir sa base de test. Au risque d'augmenter son temps de traitement, ou la quantité de ressources allouées, nécessaires pour réaliser l'attaque.
