@@ -1,4 +1,4 @@
-![Logo John the Ripper](Images/JtR.png)
+<p align="center"><img src=Images/JtR.png ></p>
 
 # <p align="center"> DOCUMENTATION UTILISATEUR </p>
 
@@ -34,13 +34,13 @@ Chapitre III : Des atteintes aux systèmes de traitement automatisé de données
 Il faut plusieurs étapes pour vérifier la robustesse du mot de passe d'un fichier zippé. 
 Allez tout d'abord dans votre Terminal Linux.  
 
-La première est d'extraire le mot de passe de votre fichier (ici pour l'exemple, ``` dossier.zip ```). Pour cela, utilisez : ```zip2john dossier.zip > hash.txt ```.
+La première étape est d'extraire le mot de passe de votre fichier (ici pour l'exemple, ``` dossier.zip ```) dans un fichier déjà créé (ici, ```hash.txt```). Pour cela, utilisez : ```zip2john dossier.zip > hash.txt ```.
 ![Première commande à effectuer](Images/Base_Etape1.png)
 
 Pour information, ton nouveau fichier ```hash.txt``` devrait ressembler à ceci :
 ![Hash.txt](Images/Base_Etape1_pourinfo.png)
 
-La deuxième est de lancer la commande ```john hash.txt ```.
+La deuxième étape est de lancer la commande ```john hash.txt ```.
 Deux résultats possibles pour cette commande : 
 1. Le mot de passe est trouvé rapidement. Il n'est pas assez robuste.
    
@@ -61,7 +61,7 @@ On peut voir ici que John-the-ripper était en train d'utiliser son dernier mode
 ### Options avancées
 1. Lancer une attaque uniquement avec le mode simple : ```john --single hash.txt ```  
    ![Mode simple](Images/User_Guide/Use_Single.png)
-   
+
 2. Lancer une attaque uniquement avec le mode dictionnaire : ```john -w hash.txt ```  
    ![Attaque par dictionnaire ](Images/User_Guide/Use_W.png)
      
@@ -81,15 +81,21 @@ On peut voir ici que John-the-ripper était en train d'utiliser son dernier mode
 Dans le terminal Linux: 
 - créer deux fichiers hash.txt et hash_user.txt : ```touch hash.txt hash_user.txt```  
 - changer les droits de ces deux fichiers : ```chmod 700 hash.txt && chmod 700 hash_user.txt```  
-- extraire le hash des deux fichiers de la base SAM : ```sudo samdump2 FICHIER_SYSTEM FICHIER_SAM > hash.txt```. Si ces fichiers ne sont pas présents, se référer à l'INSTALL.md.  
+- extraire le hash des deux fichiers de la base SAM : ```sudo samdump2 FICHIER_SYSTEM FICHIER_SAM > hash.txt```. Si ces fichiers ne sont pas présents, se référer au [INSTALL.md](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/39924a3daeb028b0b27cb2110d2e200526d2d398/INSTALL.md).  
 - extraire la ligne du compte à tester grâce à son nom : ```sudo grep $USERNAME hash.txt > hash_user.txt```  
 - lancer John sur ce hash : ```john --format=NT hash_user.txt```  
 ![Attaque contre un compte local](Images/User_Guide/AttaqueCompteLocal.png)  
   
 
 ## FAQ
-" Quand je lance zip2john, on me dit que "zip2john not found". "   
-Il faut vérifier que l'alias a bien été créé, se reférer au INSTALL.md .
+" Quand je lance zip2john, on me dit que ```zip2john not found```. "   
+Il faut vérifier que l'alias a bien été créé, se reférer au [INSTALL.md](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/39924a3daeb028b0b27cb2110d2e200526d2d398/INSTALL.md).
+
+" Quand je lance zip2john, on me dit que ```hash.txt : no such file or directory found```. "  
+Vous devez créer le fichier ```hash.txt```avant de l'utiliser.
+
+" Quand je lance zip2john, on me dit que ```Did not find End of Central Directory```. "  
+Avez-vous lancé la bonne commande, avec la redirection ? Si oui, votre dossier zippé est peut être corrompé. Tentez de lancer ```zip -FF dossier.zip --out dossierRepare.zip``` et ```zipZjohn dossierRepare.zip > hash.txt```. Si le même problème subsiste, refaite votre archive.
 
 " Quand je lance John, j'ai ``Ǹo password hashes loaded`` ou ```No password hashes left to crack```."   
 Plusieurs raisons possibles :  
