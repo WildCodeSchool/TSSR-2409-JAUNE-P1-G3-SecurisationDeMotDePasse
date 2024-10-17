@@ -84,6 +84,10 @@ Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonct
 
 ### 7- Améliorations possibles
 
-Il faudrait améliorer l'attaque sur un mot de passe du compte local, qui reste sans résultat.  
-Nous pourrions créer un script pour automatiser la vérification du mot de passe d'un compte local.
-Nous pourrions également créer un script pour scanner les mots de passe des dossiers du serveur, et ainsi informer les propriétaires des failles et de l'importance d'un mot de passe robuste.
+  - Il faudrait améliorer l'attaque sur un mot de passe du compte local, qui reste sans résultat.
+
+  - Nous pourrions créer un script pour automatiser la vérification du mot de passe d'un compte local.
+
+  - Nous pourrions également créer un script pour scanner les mots de passe des dossiers du serveur, et ainsi informer les propriétaires des failles et de l'importance d'un mot de passe robuste.
+
+  - Il pourrait être intéressant d'automatiser une mise à jour du dictionnaire utilisé par JtR. L'idée serait de récupérer de nouveaux dictionnaires, en prélever les mots de passe absents de sa liste actuelle pour les implémenter et ainsi enrichir sa base de test.
