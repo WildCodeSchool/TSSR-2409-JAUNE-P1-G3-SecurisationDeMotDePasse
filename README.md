@@ -4,7 +4,7 @@
 ### **1- Présentation du projet, objectifs finaux**
 Le projet est d'installer un logiciel de décryptage de mot de passe, John The Ripper, sur une machine Client, connecté à un Serveur et d'effectuer une attaque par dictionnaire sur le mot de passe d'un dossier zip sur un serveur.  
 
-John The Ripper (souvent abrégé JtR ou John) est un logiciel libre  et [open source](https://github.com/openwall/john) de cassage de mots de passe développé à l'origine pour les systèmes Unix. Il est désormais disponible sur de nombreuses plateformes, dont Windows, Linux et macOS. Il s'agit d'un puissant outil de craquage de mots de passe largement utilisé dans le domaine de la sécurité informatique.
+[John The Ripper](https://github.com/openwall/john) (souvent abrégé JtR ou John) est un logiciel libre  et open source de cassage de mots de passe développé à l'origine pour les systèmes Unix. Il est désormais disponible sur de nombreuses plateformes, dont Windows, Linux et macOS. Il s'agit d'un puissant outil de craquage de mots de passe largement utilisé dans le domaine de la sécurité informatique.
 
 
 Les **objectifs** sont :  
