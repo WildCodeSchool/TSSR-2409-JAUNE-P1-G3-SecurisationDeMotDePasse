@@ -81,7 +81,7 @@ On peut voir ici que John-the-ripper était en train d'utiliser son dernier mode
 Dans le terminal Linux: 
 - créer deux fichiers hash.txt et hash_user.txt : ```touch hash.txt hash_user.txt```  
 - changer les droits de ces deux fichiers : ```chmod 700 hash.txt && chmod 700 hash_user.txt```  
-- extraire le hash des deux fichiers de la base SAM : ```sudo samdump2 FICHIER_SYSTEM FICHIER_SAM > hash.txt```. Si ces fichiers ne sont pas présents, se référer au [INSTALL.md](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/39924a3daeb028b0b27cb2110d2e200526d2d398/INSTALL.md).  
+- extraire le hash des deux fichiers de la base SAM : ```sudo samdump2 FICHIER_SYSTEM FICHIER_SAM > hash.txt```. Si ces fichiers ne sont pas présents, se référer au [INSTALL.md](INSTALL.md).  
 - extraire la ligne du compte à tester grâce à son nom : ```sudo grep $USERNAME hash.txt > hash_user.txt```  
 - lancer John sur ce hash : ```john --format=NT hash_user.txt```  
 ![Attaque contre un compte local](Images/User_Guide/AttaqueCompteLocal.png)  
