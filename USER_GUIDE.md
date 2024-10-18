@@ -65,7 +65,7 @@ On peut voir ici que John-the-ripper était en train d'utiliser son dernier mode
 2. Lancer une attaque uniquement avec le mode dictionnaire : ```john -w hash.txt ```  
    ![Attaque par dictionnaire ](Images/User_Guide/Use_W.png)
      
-3. Lancer un attaque uniquement avec le mode dictionnaire et une liste de mots choisie : ```john -w=/PATH/LISTE hash.txt```  
+3. Lancer un attaque uniquement avec le mode dictionnaire et une liste de mots choisie : ```john --wordlist=/PATH/LISTE hash.txt```  
    ![Attaque par dictionnaire choisi](Images/User_Guide/Use_Wchoisi.png)
      
 4. Voir le mot de passe trouvé : ```john --show hash.txt```  
