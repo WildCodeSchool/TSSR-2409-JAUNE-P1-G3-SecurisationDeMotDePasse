@@ -1,4 +1,4 @@
-<p align="center"><img src=Images/JtR.png ></p>
+![logo John-the-Ripper](Images/JtR.png)
   
 # TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse
   
