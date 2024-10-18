@@ -53,15 +53,15 @@ Pour le sprint 2 :
 ### 4- Choix techniques 
 
 Le choix du Serveur a été imposé par le client : Windows Server 2022.  
-Le choix due l'OS Client a été imposé par le client : Ubuntu. Nous avons priviligié Ubuntu 22.04 LTS car, en service depuis plusieurs années, elle présente de plus fortes probabilitéss d'être présente sur une machine client.   
-Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonctionnalité d'autodétection des fonctions de hachage utilisées pour stocker les mots de passe. Il est utilisé par une importante communauté et il propose de nombreuse fonctions de hachage, tel que:
+Le choix de l'OS Client a été imposé par le client : Ubuntu. Nous avons priviligié Ubuntu 22.04 LTS car, en service depuis plusieurs années, elle présente de plus fortes probabilitéss d'être présente sur une machine client.   
+Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonctionnalité d'autodétection des fonctions de hachage utilisées pour stocker les mots de passe. Il est utilisé par une importante communauté et il propose de nombreuses fonctions de hachage, telles que:
 - Les algorithmes classiques :
   - MD5
   - SHA (différentes variantes)
   - UNIX crypt(3)
   - DES traditionnel
   - Blowfish
-- Hachages spécifiques aux systèmes :
+- les hachages spécifiques aux systèmes :
   - Windows LM (DES-based)
   -  NTLM (pour les versions récentes de Windows)
   -  erberos/AFS
@@ -72,7 +72,7 @@ Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonct
 
 ### 5- Difficultés rencontrées 
   
-  - 1 Problème rencontré concernant l'accès aux fichiers .zip protégés par mots de passe, qui sont stocké sur le serveur Windows depuis la machine cliente.
+  - 1 Problème rencontré concernant l'accès aux fichiers .zip protégés par mots de passe, qui sont stockés sur le serveur Windows depuis la machine cliente.
     
   - 2 Problème rencontré avec l'utilisation des différentes versions de VirtualBox. Incapacité à partager les images OVA des machines virtuelles et ainsi bénéficier d'une version commune du Lab pour effectuer les tests d'utilisation de JtR.
     
@@ -90,4 +90,4 @@ Le choix du logiciel s'est porté sur John the Ripper car il dispose d'une fonct
 
   - Nous pourrions également créer un script pour scanner les mots de passe des dossiers du serveur, et ainsi informer les propriétaires des failles et de l'importance d'un mot de passe robuste.
 
-  - Il pourrait être intéressant d'automatiser une mise à jour du dictionnaire utilisé par JtR. L'idée serait de récupérer de nouveaux dictionnaires, d'en prélever les mots de passe absents de sa liste actuelle pour les implémenter et ainsi enrichir sa base de test. Au risque d'augmenter son temps de traitement, ou la quantité de ressources allouées, nécessaires pour réaliser l'attaque.
+  - Il pourrait être intéressant d'automatiser une mise à jour du dictionnaire utilisé par JtR. L'idée serait de récupérer de nouveaux dictionnaires, d'en prélever les mots de passe absents de sa liste actuelle pour les implémenter et ainsi enrichir sa base de test. Le risque étant d'augmenter son temps de traitement, ou la quantité de ressources allouées, nécessaires pour réaliser l'attaque.
