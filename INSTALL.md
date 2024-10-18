@@ -1,6 +1,6 @@
-<p align="center"><img src=Images/JtR.png ></p>
+![logo John-the-Ripper](Images/JtR.png)
 
-# <p align="center">  DOCUMENTATION ADMINISTRATEUR </p>
+# DOCUMENTATION ADMINISTRATEUR 
 
 ## Prérequis techniques
 
