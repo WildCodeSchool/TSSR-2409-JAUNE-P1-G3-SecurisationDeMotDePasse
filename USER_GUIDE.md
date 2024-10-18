@@ -89,7 +89,7 @@ Dans le terminal Linux:
 
 ## FAQ
 " Quand je lance zip2john, on me dit que ```zip2john not found```. "   
-Il faut vérifier que l'alias a bien été créé, se reférer au [INSTALL.md](https://github.com/WildCodeSchool/TSSR-2409-JAUNE-P1-G3-SecurisationDeMotDePasse/blob/39924a3daeb028b0b27cb2110d2e200526d2d398/INSTALL.md).
+Il faut vérifier que l'alias a bien été créé, se reférer au [INSTALL.md](INSTALL.md).
 
 " Quand je lance zip2john, on me dit que ```hash.txt : no such file or directory found```. "  
 Vous devez créer le fichier ```hash.txt```avant de l'utiliser.
